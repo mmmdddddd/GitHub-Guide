@@ -22,4 +22,4 @@
 | توسعه‌دهنده | امیررضا ایدون | 40499819 | [@amrzed](https://github.com/amrzed) |
 
 ---
-Project Status: Under Review
+Project Status: Completed
