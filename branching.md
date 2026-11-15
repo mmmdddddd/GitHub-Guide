@@ -30,3 +30,32 @@
   git checkout -b docs/branching
   git switch -c docs/branching
   ```
+
+## ۳. ارسال شاخه به GitHub و حذف شاخه‌های قدیمی
+- **اولین ارسال (Push) یک شاخه جدید به GitHub:**
+  ```bash
+  git push -u origin docs/branching
+  ```
+- **حذف شاخه محلی پس از ادغام شدن در `main`:**
+  ```bash
+  git branch -d docs/branching
+  ```
+- **حذف شاخه از روی GitHub:**
+  ```bash
+  git push origin --delete docs/branching
+  ```
+
+## ۴. استاندارد نام‌گذاری شاخه‌ها در پروژه‌های تیمی
+- `feature/...` برای افزودن قابلیت جدید (مثلاً `feature/user-auth`)
+- `fix/...` یا `bugfix/...` برای رفع خطا (مثلاً `fix/navbar-alignment`)
+- `docs/...` برای تغییر در مستندات (مثلاً `docs/branching`)
+
+## ۵. مثال عملی شروع کار روی یک وظیفه جدید
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/search-bar
+git add .
+git commit -m "feat: implement search bar component"
+git push -u origin feature/search-bar
+```
