@@ -43,3 +43,30 @@ git config --list
    ```bash
    git commit -m "feat: add initial project structure"
    ```
+
+   ## ۴. مشاهده تاریخچه تغییرات
+برای دیدن لیست تمام کامیت‌های ثبت‌شده در مخزن:
+```bash
+git log
+git log --oneline --graph --all
+```
+
+## ۵. همگام‌سازی با مخزن راه دور (GitHub)
+- **ارسال کامیت‌های محلی به GitHub:**
+  ```bash
+  git push origin main
+  ```
+- **دریافت آخرین تغییرات هم‌تیمی‌ها از GitHub:**
+  ```bash
+  git pull origin main
+  ```
+
+## ۶. مثال عملی یک سناریوی روزمره
+```bash
+git pull origin main
+echo "# راهنمای نصب" > install.md
+git status
+git add install.md
+git commit -m "docs: add installation guide"
+git push origin main
+```
